@@ -1,1 +1,1 @@
-source $DOTS/scripts/init.sh
+source "$DOTS"/scripts/init.sh

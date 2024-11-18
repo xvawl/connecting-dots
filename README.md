@@ -17,9 +17,9 @@ The dots file configuration that connects different devices, platforms, etc.
 ## Structure of files
 
 ```plain text
-├── dots # custom dot files
-├── scripts # helper scripts
-├── xdg-config # xdg compliant config
-├── bash # start script of bash
-└── zsh # start script of zsh
+├── dots          # custom dot files
+├── scripts       # helper scripts
+├── xdg-config    # xdg compliant config
+├── bash          # start script of bash
+└── zsh           # start script of zsh
 ```

@@ -7,4 +7,4 @@ export DOTS_X="$HOME"/x
 export DOTS_DATA="$HOME"/z/data
 export DOTS_CACHE="$HOME"/z/cache
 
-source $DOTS/zsh/zsh.sh
+source "$DOTS"/zsh/zsh.sh
