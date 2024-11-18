@@ -22,9 +22,9 @@ dots_func_log "[nvm] nvm loaded"
 
 current_nvm=$(nvm current)
 if [ "$current_nvm" = "none" ]; then
-  dots_func_log "[nvm] no node installed, installing default v16"
-  nvm install 16
-  nvm alias default 16
+  dots_func_log "[nvm] no node installed, installing default v20"
+  nvm install 20
+  nvm alias default 20
   dots_func_log "[nvm] node v16 installed and set to nvm default"
 fi
 
