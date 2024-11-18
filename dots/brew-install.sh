@@ -1,8 +1,18 @@
-if [ "$(uname)"=="Darwin" ]; then
+if [[ "$(uname)" = "Darwin" ]]; then
     dots_func_log "[OS] host OS is Darwin(macOS)"
     dots_func_newline
 
-    if [ $(path_exists /opt/homebrew/bin/brew) -eq 0 ]; then
+    if [ "$(path_exists /opt/homebrew/bin/brew)" -eq 0 ]; then
+        # https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
+        export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+        export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+        export HOMEBREW_INSTALL_FROM_API=1
+        # https://mirrors.tuna.tsinghua.edu.cn/help/homebrew-bottles/
+        export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+        export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+        # https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
+        export HOMEBREW_PIP_INDEX_URL="https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+
         eval "$(/opt/homebrew/bin/brew shellenv)"
     fi
 
